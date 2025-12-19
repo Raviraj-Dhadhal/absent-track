@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Absence History</title></head>
+<body>
+<h1>Absence History</h1>
+<table border="1">
+<tr><th>Roll Number</th><th>Name</th><th>Date</th><th>Lecture</th></tr>
+{% for h in history %}
+<tr>
+    <td>{{ h['Roll Number'] }}</td>
+    <td>{{ h['Name'] }}</td>
+    <td>{{ h['Date'] }}</td>
+    <td>{{ h['Lecture'] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<h2>Summary</h2>
+<table border="1">
+<tr><th>Roll Number</th><th>Name</th><th>Absent Count</th></tr>
+{% for s in summary %}
+<tr>
+    <td>{{ s['Roll Number'] }}</td>
+    <td>{{ s['Name'] }}</td>
+    <td>{{ s['Absent Count'] }}</td>
+</tr>
+{% endfor %}
+</table>
+<br><a href="/">Back</a>
+</body>
+</html>

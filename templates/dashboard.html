@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<h1>Dashboard</h1>
+<p>Total Lectures Recorded: {{ total_lectures }}</p>
+<table border="1">
+<tr>
+    <th>Roll Number</th><th>Name</th><th>Absent Count</th>
+    <th>Percentage Absent</th><th>Most Absent On</th>
+</tr>
+{% for d in dashboard %}
+<tr>
+    <td>{{ d['Roll Number'] }}</td>
+    <td>{{ d['Name'] }}</td>
+    <td>{{ d['Absent Count'] }}</td>
+    <td>{{ d['Percentage Absent'] }}%</td>
+    <td>{{ d['Most Absent On'] }}</td>
+</tr>
+{% endfor %}
+</table>
+<br><a href="/">Back</a>
+</body>
+</html>

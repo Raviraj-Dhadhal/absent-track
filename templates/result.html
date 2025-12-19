@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absent Summary</title>
+</head>
+<body>
+    <h1>Absent Summary for {{ date_title }}</h1>
+
+    {% if grouped %}
+        {% for subject, students in grouped.items() %}
+            <h2>{{ subject }}</h2>
+            {% for student in students %}
+                <p>{{ student }}</p>
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>No absentees recorded.</p>
+    {% endif %}
+
+    <br><a href="/">Back to Home</a>
+</body>
+</html>

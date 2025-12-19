@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Absentees</title>
+</head>
+<body>
+    <h1>Enter Absentees</h1>
+
+    <form method="POST">
+        <label>Date:</label><br>
+        <input type="date" name="date" value="{{ date }}" required><br><br>
+
+        <label>Select Lecture:</label><br>
+        <input type="radio" name="lecture" value="Maths" required> Maths<br>
+        <input type="radio" name="lecture" value="OOPS"> OOPS<br>
+        <input type="radio" name="lecture" value="ADBMS"> ADBMS<br>
+        <input type="radio" name="lecture" value="DCN"> DCN<br>
+        <input type="radio" name="lecture" value="DS"> DS<br><br>
+
+        <label>Absent Roll Numbers (comma separated):</label><br>
+        <input type="text" name="roll_numbers" placeholder="e.g. 101, 105, 110" required><br><br>
+
+        <button type="submit" name="next">Next</button>
+        <button type="submit" name="finish">Finish</button>
+    </form>
+</body>
+</html>
